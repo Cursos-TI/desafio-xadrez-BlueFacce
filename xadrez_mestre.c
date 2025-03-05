@@ -1,15 +1,12 @@
 #include <stdio.h>
 
 //Recursivo para torre
-void moverTorre(int y, int casas){
-    if(casas == 0){
-        return;
-    }
-    if(y < 7){
-    printf("Direita\n");
-    moverTorre(y + 1, casas - 1);
-    }
-}   
+void moverTorre(int casas){
+    for(int i = 0; i < casas; i++){
+       printf("Direita\n"); 
+    }   
+} 
+   
 
 //Recursivo para bispo com loop aninhado
 void moverBispo(int x, int y, int casas){
@@ -50,7 +47,7 @@ int main(){
 
     //Mover torre
     printf("Movimento da Torre:\n");
-    moverTorre(y,5);
+    moverTorre(5);
     printf("\n");
     
     //Mover Bispo
